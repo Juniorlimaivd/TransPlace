@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransPlace/LocalViewController.swift"
+            timestampString = "513375646.616186"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransPlace.LocalViewController.__deallocating_deinit"
+                  moduleName = "TransPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VictorAugusto/Documents/Projects/TransPlace/TransPlace/TransPlace/LocalViewController.swift"
+                  timestampString = "513376225.426915"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransPlace.LocalViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TransPlace.LocalViewController"
+                  moduleName = "TransPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VictorAugusto/Documents/Projects/TransPlace/TransPlace/TransPlace/LocalViewController.swift"
+                  timestampString = "513376225.433346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransPlace.LocalViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TransPlace.LocalViewController"
+                  moduleName = "TransPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VictorAugusto/Documents/Projects/TransPlace/TransPlace/TransPlace/LocalViewController.swift"
+                  timestampString = "513376225.439452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransPlace.LocalViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TransPlace.LocalViewController&gt;"
+                  moduleName = "TransPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VictorAugusto/Documents/Projects/TransPlace/TransPlace/TransPlace/LocalViewController.swift"
+                  timestampString = "513376225.44251"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransPlace.LocalViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TransPlace.LocalViewController&gt;"
+                  moduleName = "TransPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/VictorAugusto/Documents/Projects/TransPlace/TransPlace/TransPlace/LocalViewController.swift"
+                  timestampString = "513376225.445478"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransPlace/LocalViewController.swift"
+            timestampString = "513376606.076473"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransPlace/Comment.swift"
+            timestampString = "513378646.05408"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(userName:rating:tags:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
