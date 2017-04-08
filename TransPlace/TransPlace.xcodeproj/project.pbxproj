@@ -12,6 +12,7 @@
 		F72A07E31E9951DA0041AAE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72A07E11E9951DA0041AAE8 /* Main.storyboard */; };
 		F72A07E51E9951DA0041AAE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72A07E41E9951DA0041AAE8 /* Assets.xcassets */; };
 		F72A07E81E9951DA0041AAE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72A07E61E9951DA0041AAE8 /* LaunchScreen.storyboard */; };
+		F72A07F01E9952090041AAE8 /* localStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72A07EF1E9952090041AAE8 /* localStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F72A07E41E9951DA0041AAE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72A07E71E9951DA0041AAE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72A07E91E9951DA0041AAE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72A07EF1E9952090041AAE8 /* localStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = localStoryboard.storyboard; path = ../localStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				F72A07DD1E9951DA0041AAE8 /* AppDelegate.swift */,
+				F72A07EF1E9952090041AAE8 /* localStoryboard.storyboard */,
 				F72A07DF1E9951DA0041AAE8 /* ViewController.swift */,
 				F72A07E11E9951DA0041AAE8 /* Main.storyboard */,
 				F72A07E41E9951DA0041AAE8 /* Assets.xcassets */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72A07E81E9951DA0041AAE8 /* LaunchScreen.storyboard in Resources */,
+				F72A07F01E9952090041AAE8 /* localStoryboard.storyboard in Resources */,
 				F72A07E51E9951DA0041AAE8 /* Assets.xcassets in Resources */,
 				F72A07E31E9951DA0041AAE8 /* Main.storyboard in Resources */,
 			);
