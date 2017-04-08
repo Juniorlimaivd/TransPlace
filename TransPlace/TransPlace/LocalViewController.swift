@@ -20,7 +20,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleComments()
+        setPositiveComments()
         
         tableView!.delegate = self
         tableView!.dataSource = self
@@ -55,6 +55,8 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath)->CGFloat {
         return 150
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "CommentViewCell"
         
@@ -65,37 +67,9 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         let comment = comments[indexPath.row]
         print(">>>>>>>>>>>>>>>>>>>>>>>> HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
         print(comment.userName)
-//        cell.name.text = comment.userName
-//        cell.rating.rating = comment.rating
-//        if (comment.tags[0] == true) {
-//            cell.tag1.text = "Diversidade"
-//        } else if(comment.tags[3] == true) {
-//            cell.tag1.text = "Racismo"
-//        } else {
-//            cell.tag1.text = ""
-//        }
-//        
-//        if (comment.tags[1] == true) {
-//            cell.tag2.text = "Conscientizador"
-//        } else if(comment.tags[4] == true) {
-//            cell.tag2.text = "Misoginia"
-//        } else {
-//            cell.tag2.text = ""
-//        }
-//        
-//        if (comment.tags[2] == true) {
-//            cell.tag3.text = "Justiça Social"
-//        } else if(comment.tags[5] == true) {
-//            cell.tag3.text = "Transfobia"
-//        } else {
-//            cell.tag3.text = ""
-//        }
-//        
-//        cell.commentText.text = comment.text
-        
-        cell.name.text = "random name"
-        cell.rating.rating = 5
-        if (true == true) {
+        cell.name.text = comment.userName
+        cell.rating.rating = comment.rating
+        if (comment.tags[0] == true) {
             cell.tag1.text = "Diversidade"
         } else if(comment.tags[3] == true) {
             cell.tag1.text = "Racismo"
@@ -103,35 +77,55 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.tag1.text = ""
         }
         
-        if (false == true) {
+        if (comment.tags[1] == true) {
             cell.tag2.text = "Conscientizador"
-        } else if(false == true) {
+        } else if(comment.tags[4] == true) {
             cell.tag2.text = "Misoginia"
         } else {
             cell.tag2.text = ""
         }
         
-        if (false == true) {
+        if (comment.tags[2] == true) {
             cell.tag3.text = "Justiça Social"
-        } else if(false == true) {
+        } else if(comment.tags[5] == true) {
             cell.tag3.text = "Transfobia"
         } else {
             cell.tag3.text = ""
         }
         
-        cell.commentText.text = "amazing text here"
+        cell.commentText.text = comment.text
+        
         
         return cell
     }
     
-    //MARK: Private methods
-    private func loadSampleComments() {
-        let comment1 = Comment(userName: "Luiza", rating: 1, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [false, false, false, true, false, false])
-        let comment2 = Comment(userName: "Rafael", rating: 3, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [false, false, false, true, true, false])
-        let comment3 = Comment(userName: "Gregorio", rating: 4, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [true, true, true, false, false, false])
-        
-        comments += [comment1!, comment2!, comment3!]
+    //MARK: Actions
+    @IBAction func positiveComments(_ sender: Any) {
+        setPositiveComments()
+    }
+    @IBAction func negativeComments(_ sender: Any) {
+        setNegativeComments()
     }
     
+
+    
+    //MARK: Private methods
+    private func setPositiveComments() {
+        let comment1 = Comment(userName: "Luiza", rating: 1, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [false, false, false, true, false, false])
+        let comment2 = Comment(userName: "Rafael", rating: 3, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [false, false, false, true, true, false])
+        let comment3 = Comment(userName: "Gregorio", rating: 2, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [false, false, false, true, true, true])
+        comments.removeAll()
+        comments += [comment1!, comment2!, comment3!]
+        self.tableView.reloadData()
+    }
+    
+    private func setNegativeComments() {
+        let comment1 = Comment(userName: "Ricardo", rating: 5, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [true, false, true, false, false, false])
+        let comment2 = Comment(userName: "Roberta", rating: 4, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [false, true, false, false, false, false])
+        let comment3 = Comment(userName: "Anastor", rating: 4, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", tags: [true, true, true, false, false, false])
+        comments.removeAll()
+        comments += [comment1!, comment2!, comment3!]
+        self.tableView.reloadData()
+    }
 
 }
