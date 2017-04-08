@@ -12,14 +12,16 @@ import UIKit
 
 class Comment {
 
-    var userName: String?
-    var rating: Int?
-    var tags = [Bool]()
+    var userName: String
+    var rating: Int
+    var text: String
+    var tags = [Bool!]()
     
-    init?(userName: String, rating: Int, tags: [Bool]) {
+    init?(userName: String, rating: Int, text: String, tags: [Bool]) {
         self.userName = userName
         self.rating = rating
         self.tags = tags
+        self.text = text
     }
 
 }
