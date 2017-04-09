@@ -18,14 +18,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBarButton.layer.cornerRadius = 2.0
+        searchBarButton.layer.cornerRadius = 5.0
         searchBarButton.layer.shadowColor = UIColor.black.cgColor
         searchBarButton.layer.shadowOffset = CGSize(width: 0, height: 3)
-        searchBarButton.layer.shadowRadius = 5
+        searchBarButton.layer.shadowRadius = 3
         searchBarButton.layer.shadowOpacity = 0.25
         searchBarButton.setTitle("Pesquise lugares inclusivos", for: .normal)
         searchBarButton.titleEdgeInsets = UIEdgeInsets(top: 0.0,
-                                                       left: 20.0 + (searchBarButton.imageView?.frame.width)! + 5.0,
+                                                       left: 10.0 + (searchBarButton.imageView?.frame.width)! ,
                                                        bottom: 0.0,
                                                        right: 0.0)
         searchBarButton.setTitleColor(UIColor.lightGray, for: .normal)
