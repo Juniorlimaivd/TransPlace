@@ -16,12 +16,14 @@ class Comment {
     var rating: Int
     var text: String
     var tags = [Bool!]()
+    var commentDate: String
     
-    init?(userName: String, rating: Int, text: String, tags: [Bool]) {
+    init?(userName: String, rating: Int, text: String,commentDate: String,  tags: [Bool]) {
         self.userName = userName
         self.rating = rating
         self.tags = tags
         self.text = text
+        self.commentDate = commentDate
     }
 
 }
