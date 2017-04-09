@@ -107,11 +107,11 @@ class CommentRegisterViewController: UITableViewController , UITextViewDelegate,
     }
     
     func backScreen(){
-    
+        navigationController?.popViewController(animated: true)
     }
     
     func saveScreen(){
-        
+        navigationController?.popViewController(animated: true)
     }
     
     func addTagSubViews(){

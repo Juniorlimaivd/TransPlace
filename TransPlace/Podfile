@@ -4,7 +4,11 @@
 target 'TransPlace' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  
+  pod 'SwiftyStarRatingView'
+  pod ‘Firebase’
+  pod ‘Firebase/Storage’
+  pod ‘Firebase/Database’
+  pod ‘SwiftyJSON’ 
   # Pods for TransPlace
   pod 'Firebase'
   pod 'Firebase/Database'

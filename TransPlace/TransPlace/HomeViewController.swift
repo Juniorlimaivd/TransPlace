@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var searchBarButton: UIButton!
   
-    
+    var chooseCategory : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -62,7 +62,31 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func goToLunchCategory(_ sender: Any) {
+        chooseCategory = "Lunch"
+        performSegue(withIdentifier: "CategorySegue", sender: self)
+    }
+    
+    @IBAction func goToEnterprise(_ sender: Any) {
+        chooseCategory = "Enterprise"
+        performSegue(withIdentifier: "CategorySegue", sender: self)
+    }
+    @IBAction func goToNightLife(_ sender: Any) {
+        chooseCategory = "NightLife"
+        performSegue(withIdentifier: "CategorySegue", sender: self)
+    }
+    @IBAction func goToFun(_ sender: Any) {
+        chooseCategory = "Fun"
+        performSegue(withIdentifier: "CategorySegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CategorySegue" {
+            let dest = segue.destination as! CategoryViewController
+            dest.scope = chooseCategory
+        }
+    }
+    
 }
 
 extension UIView {
