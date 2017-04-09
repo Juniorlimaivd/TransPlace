@@ -86,7 +86,6 @@
 		528460FB1E9A0A2E00641C20 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52B8001C1E9987CA00C5946E /* Comment.swift */,
 				528460F91E99F4C800641C20 /* Place.swift */,
 				528460FC1E9A0A4400641C20 /* Address.swift */,
 			);
@@ -151,7 +150,6 @@
 		F73FD7541E9A0E6D002ECF42 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				52B800201E999A0500C5946E /* CommentViewCell.swift */,
 				F7F81CFF1E99E87D0060DA38 /* CategoryTableViewCell.swift */,
 			);
 			name = Cells;
