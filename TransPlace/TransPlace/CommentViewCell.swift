@@ -7,27 +7,20 @@
 //
 
 import UIKit
+import SwiftyStarRatingView
 
 class CommentViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
     
-    @IBOutlet weak var rating: RatingControl!
+    @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var tag1: UILabel!
-    
-    @IBOutlet weak var tag2: UILabel!
-    
-    @IBOutlet weak var tag3: UILabel!
+    @IBOutlet weak var stars: SwiftyStarRatingView!
     
     @IBOutlet weak var commentText: UITextView!
     @IBOutlet weak var commentDate: UILabel!
     
-    @IBOutlet weak var pin1Image: UIImageView!
-    
-    @IBOutlet weak var pin2Image: UIImageView!
-    
-    @IBOutlet weak var pin3Image: UIImageView!
+
     
     @IBOutlet weak var userIcon: UIImageView!
     
@@ -41,12 +34,7 @@ class CommentViewCell: UITableViewCell {
         
         let pinned = UIImage(named: "pinned")
         let pinnedChanged = pinned?.withRenderingMode(.alwaysTemplate)
-        pin1Image.image = pinnedChanged
-        pin1Image.tintColor = UIColor.black
-        pin2Image.image = pinnedChanged
-        pin2Image.tintColor = UIColor.black
-        pin3Image.image = pinnedChanged
-        pin3Image.tintColor = UIColor.black
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
