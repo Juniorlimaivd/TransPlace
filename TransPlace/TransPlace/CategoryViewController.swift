@@ -12,7 +12,9 @@ import SwiftyStarRatingView
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryTableView: UITableView!
+    var scope : String! = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -22,6 +24,20 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         categoryTableView.separatorColor = UIColor.lightGray
         categoryTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: categoryTableView.frame.width, height: 20))
+        if scope != "" {
+            if scope == "Lunch" {
+                searchBar.selectedScopeButtonIndex = 1
+            } else if scope == "Enterprise" {
+                searchBar.selectedScopeButtonIndex = 2
+            } else if scope == "NightLife" {
+                searchBar.selectedScopeButtonIndex = 3
+            } else if scope == "Fun" {
+                searchBar.selectedScopeButtonIndex = 4
+            }
+            
+            
+        }
+        
         // Do any additional setup after loading the view.
         
     }
@@ -35,6 +51,15 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return 5;
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       
+    }
+    
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
@@ -42,13 +67,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = categoryTableView.dequeueReusableCell(withIdentifier: "localCell")
-        
-        
-        
+
         return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "LocalSegue", sender: self)
     }
     /*

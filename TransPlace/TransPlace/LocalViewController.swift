@@ -34,7 +34,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setNegativeComments()
-        
+        tabBarController?.tabBar.isHidden = true
         tableView!.delegate = self
         tableView!.dataSource = self
         self.view .addSubview(tableView!)
