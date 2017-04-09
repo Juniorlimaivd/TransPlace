@@ -117,11 +117,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransPlace/LocalViewController.swift"
-            timestampString = "513399340.433998"
+            timestampString = "513415025.867532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "LocalViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -133,11 +133,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransPlace/LocalViewController.swift"
-            timestampString = "513399340.433998"
+            timestampString = "513415025.867532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -149,11 +149,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransPlace/LocalViewController.swift"
-            timestampString = "513399340.433998"
+            timestampString = "513415025.867532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "setNegativeComments()"
             landmarkType = "7">
          </BreakpointContent>
@@ -165,7 +165,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransPlace/LocalViewController.swift"
-            timestampString = "513391033.036385"
+            timestampString = "513413090.781529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"

@@ -6,5 +6,9 @@ target 'TransPlace' do
   use_frameworks!
   
   # Pods for TransPlace
-
+  pod 'Firebase'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'SwiftyJSON'
+  
 end

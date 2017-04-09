@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -16,7 +17,6 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var rating: RatingControl!
     @IBOutlet weak var tableView: UITableView!
     var comments = [Comment]()
-   
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var positiveBtn: UIBarButtonItem!
     @IBOutlet weak var negativeBtn: UIBarButtonItem!
@@ -26,6 +26,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var racismoPercent: UILabel!
     @IBOutlet weak var misPercent: UILabel!
     @IBOutlet weak var transfobPercent: UILabel!
+    let firebaseCalls = FirebaseCalls()
     
     
     
@@ -46,6 +47,21 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         // buttons
         positiveBtn.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
         negativeBtn.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
+       
+        firebaseCalls?.fetchPlaceByName(name: "Social Bar", callback: {
+            place in
+            print(">>>>>>>>>>>>>>>>>>>> AQUI >>>>>>>>>>>>>>>>>>>>>>>>>")
+            print(place.name)
+            print(place.address.number)
+            print(place.address.city)
+            print(place.address.state)
+            print(place.address.street)
+            print(place.address.zipCode)
+            print(place.address.additional)
+            print(place.rating)
+            print(place.categories)
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -163,6 +179,7 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //MARK: Private methods
     private func setNegativeComments() {
+        print(">>>>>>>>>>>>>>>>>>>> HNNNNN<<<<<<<<<<<<<<<<<<<<")
         let comment1 = Comment(userName: "Luiza", rating: 1, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "05/11/2016", tags: [false, false, false, true, false, false])
         let comment2 = Comment(userName: "Rafael", rating: 3, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "15/09/2016", tags: [false, false, false, true, true, false])
         let comment3 = Comment(userName: "Gregorio", rating: 2, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "12/12/2016", tags: [false, false, false, true, true, true])
