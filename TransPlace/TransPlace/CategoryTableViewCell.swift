@@ -11,12 +11,20 @@ import SwiftyStarRatingView
 class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var starView: SwiftyStarRatingView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var imagePlace: UIImageView!
+    
+    @IBOutlet weak var streetNumber: UILabel!
+    
+    @IBOutlet weak var cidadeEstado: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         starView.maximumValue = 5
         starView.minimumValue = 0
-        starView.value = 3
+        starView.value = 4
         starView.tintColor = #colorLiteral(red: 0.4970856905, green: 0.3023125529, blue: 0.9918896556, alpha: 1)
         starView.isEnabled = false
         // Initialization code

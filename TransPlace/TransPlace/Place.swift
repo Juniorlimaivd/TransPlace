@@ -15,12 +15,14 @@ class Place {
     var address: Address
     var rating: Int
     var categories:[String]
+    var imageAdress:String
     
     init(name: String, address: Address, rating: Int) {
         self.name = name
         self.address = address
         self.rating = rating
         self.categories = []
+        self.imageAdress = ""
     }
     
     

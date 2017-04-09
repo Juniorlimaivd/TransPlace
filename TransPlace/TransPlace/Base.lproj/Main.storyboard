@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,8 +63,8 @@
                                                         <constraint firstAttribute="width" secondItem="aHr-tw-TyR" secondAttribute="height" multiplier="116:61" id="5qE-3c-1tx"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ThoughtWorks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONH-3b-Psw">
-                                                    <rect key="frame" x="16" y="212" width="133" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThoughtWorks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONH-3b-Psw">
+                                                    <rect key="frame" x="25" y="212" width="133" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="ONH-3b-Psw" secondAttribute="height" multiplier="133:24" id="9C7-4I-9Fq"/>
                                                     </constraints>
@@ -79,8 +80,8 @@
                                                         <constraint firstAttribute="width" secondItem="Eck-1C-CRN" secondAttribute="height" multiplier="6:1" id="r2S-f6-Tbr"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Av. Gov. Agamenon Magalhães, 4779" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl3-2O-pd4">
-                                                    <rect key="frame" x="16" y="245" width="283" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Av. Gov. Agamenon Magalhães, 4779" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl3-2O-pd4">
+                                                    <rect key="frame" x="25" y="245" width="253.5" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jl3-2O-pd4" secondAttribute="height" multiplier="283:24" id="A6w-UY-a9q"/>
                                                     </constraints>
@@ -88,8 +89,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Santo Amaro, Recife - PE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-9B-D1o">
-                                                    <rect key="frame" x="16" y="270.5" width="283" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santo Amaro, Recife - PE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-9B-D1o">
+                                                    <rect key="frame" x="25" y="270.5" width="283" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="xfF-9B-D1o" secondAttribute="height" multiplier="283:18" id="E2E-v5-my1"/>
                                                         <constraint firstAttribute="width" constant="283" id="UQl-wu-mhF"/>
@@ -104,16 +105,26 @@
                                                 <constraint firstItem="jl3-2O-pd4" firstAttribute="top" secondItem="ONH-3b-Psw" secondAttribute="bottom" constant="9" id="24E-ic-ubj"/>
                                                 <constraint firstItem="ONH-3b-Psw" firstAttribute="top" secondItem="aHr-tw-TyR" secondAttribute="bottom" constant="21.5" id="2gl-Gj-Kkg"/>
                                                 <constraint firstItem="xfF-9B-D1o" firstAttribute="top" secondItem="jl3-2O-pd4" secondAttribute="bottom" constant="4.5" id="9jp-6J-h0i"/>
+                                                <constraint firstItem="xfF-9B-D1o" firstAttribute="leading" secondItem="VYQ-Mz-znQ" secondAttribute="leadingMargin" constant="15" id="OYW-nQ-Z5T"/>
                                                 <constraint firstItem="aHr-tw-TyR" firstAttribute="centerX" secondItem="VYQ-Mz-znQ" secondAttribute="centerX" id="Pts-mj-fMF"/>
                                                 <constraint firstItem="Eck-1C-CRN" firstAttribute="centerY" secondItem="ONH-3b-Psw" secondAttribute="centerY" id="R7W-xH-oPQ"/>
+                                                <constraint firstItem="xfF-9B-D1o" firstAttribute="leading" secondItem="VYQ-Mz-znQ" secondAttribute="leadingMargin" constant="17" id="SQp-45-lnu"/>
+                                                <constraint firstItem="jl3-2O-pd4" firstAttribute="leading" secondItem="VYQ-Mz-znQ" secondAttribute="leadingMargin" constant="15" id="VFT-UJ-ljK"/>
+                                                <constraint firstItem="jl3-2O-pd4" firstAttribute="leading" secondItem="VYQ-Mz-znQ" secondAttribute="leadingMargin" constant="17" id="Vtj-QZ-Lhk"/>
                                                 <constraint firstItem="aHr-tw-TyR" firstAttribute="centerY" secondItem="VYQ-Mz-znQ" secondAttribute="centerY" multiplier="0.7" id="WLl-5U-HR1"/>
                                                 <constraint firstItem="jl3-2O-pd4" firstAttribute="leading" secondItem="ONH-3b-Psw" secondAttribute="leading" id="Xps-of-w4Z"/>
+                                                <constraint firstItem="ONH-3b-Psw" firstAttribute="leading" secondItem="VYQ-Mz-znQ" secondAttribute="leadingMargin" constant="15" id="bWn-zt-TLp"/>
                                                 <constraint firstItem="xfF-9B-D1o" firstAttribute="leading" secondItem="jl3-2O-pd4" secondAttribute="leading" id="f3g-ot-5My"/>
+                                                <constraint firstItem="ONH-3b-Psw" firstAttribute="leading" secondItem="VYQ-Mz-znQ" secondAttribute="leadingMargin" constant="17" id="qZY-6K-kxQ"/>
                                                 <constraint firstItem="aHr-tw-TyR" firstAttribute="width" secondItem="VYQ-Mz-znQ" secondAttribute="width" multiplier="0.85" id="r1s-6C-39P"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cidadeEstado" destination="xfF-9B-D1o" id="pGV-aF-nbo"/>
+                                            <outlet property="imagePlace" destination="aHr-tw-TyR" id="I3j-19-ukp"/>
+                                            <outlet property="name" destination="ONH-3b-Psw" id="AIH-oj-lSG"/>
                                             <outlet property="starView" destination="Eck-1C-CRN" id="ewX-gp-lgW"/>
+                                            <outlet property="streetNumber" destination="jl3-2O-pd4" id="gCw-Fi-lgw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
