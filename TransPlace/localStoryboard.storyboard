@@ -12,7 +12,7 @@
         <!--Amazing Restaurant-->
         <scene sceneID="WZ6-7f-25l">
             <objects>
-                <viewController id="Crc-Dv-wZX" customClass="LocalViewController" customModule="TransPlace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LocalController" storyboardIdentifier="LocalController" id="Crc-Dv-wZX" customClass="LocalViewController" customModule="TransPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJY-H1-XBj"/>
                         <viewControllerLayoutGuide type="bottom" id="x2F-hy-eOL"/>

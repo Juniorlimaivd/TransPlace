@@ -38,7 +38,7 @@
                                     <string>Lazer</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="304" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-cV-iwa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="304" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-cV-iwa">
                                 <rect key="frame" x="0.0" y="160" width="375" height="458"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,11 +95,20 @@
                     </view>
                     <connections>
                         <outlet property="categoryTableView" destination="sdM-cV-iwa" id="jiv-d1-sQd"/>
+                        <segue destination="AeF-wc-CFB" kind="show" identifier="LocalSegue" id="mk0-go-ci4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhU-mY-ht7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848.8" y="34.632683658170919"/>
+        </scene>
+        <!--LocalController-->
+        <scene sceneID="ixr-bl-n1E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="localStoryboard" referencedIdentifier="LocalController" id="AeF-wc-CFB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="786-6E-QbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2839" y="70"/>
         </scene>
         <!--Me-->
         <scene sceneID="HhD-up-l61">
@@ -205,7 +214,7 @@
                                 </constraints>
                                 <state key="normal" image="icon-search"/>
                                 <connections>
-                                    <segue destination="G6E-Df-ewc" kind="show" id="6I0-Vf-UVO"/>
+                                    <segue destination="G6E-Df-ewc" kind="show" identifier="categorySegue" id="6I0-Vf-UVO"/>
                                 </connections>
                             </button>
                         </subviews>

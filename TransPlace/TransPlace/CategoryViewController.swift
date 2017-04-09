@@ -48,7 +48,9 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return cell!
     }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "LocalSegue", sender: self)
+    }
     /*
     // MARK: - Navigation
 
