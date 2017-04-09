@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" id="ePG-KZ-Cb1"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="user-silhouette" id="ePG-KZ-Cb1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPG-bP-31G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,7 +204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transplace_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7am-vy-jkE">
-                                <rect key="frame" x="76" y="60" width="225" height="120"/>
+                                <rect key="frame" x="75" y="60" width="225" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7am-vy-jkE" secondAttribute="height" multiplier="15:8" id="HGi-U8-vlO"/>
                                 </constraints>
@@ -291,7 +291,7 @@
         <!--Adicionar comentário-->
         <scene sceneID="FnQ-mE-b7W">
             <objects>
-                <tableViewController id="fzU-gx-1Dg" customClass="CommentRegisterViewController" customModule="TransPlace" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="CommentRegister" storyboardIdentifier="CommentRegister" id="fzU-gx-1Dg" customClass="CommentRegisterViewController" customModule="TransPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" indicatorStyle="black" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fQv-Ch-lXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -517,5 +517,6 @@
         <image name="icon-search" width="16" height="16"/>
         <image name="junk-food" width="512" height="512"/>
         <image name="transplace_logo" width="1143" height="318"/>
+        <image name="user-silhouette" width="32" height="32"/>
     </resources>
 </document>

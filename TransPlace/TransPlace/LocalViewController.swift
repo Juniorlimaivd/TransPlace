@@ -8,24 +8,23 @@
 
 import UIKit
 
-class LocalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LocalViewController: UIViewController {
     
     //MARK: Properties
 
 
-    @IBOutlet weak var rating: RatingControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedPage: UISegmentedControl!
+    @IBOutlet weak var negativeViewContainer: UIView!
+    @IBOutlet weak var positiveViewContainer: UIView!
+    @IBOutlet weak var overViewContainer: UIView!
+    //@IBOutlet weak var rating: RatingControl!
+    //@IBOutlet weak var tableView: UITableView!
     var comments = [Comment]()
-   
+    var tagName = ""
     @IBOutlet weak var navItem: UINavigationItem!
-    @IBOutlet weak var positiveBtn: UIBarButtonItem!
-    @IBOutlet weak var negativeBtn: UIBarButtonItem!
-    @IBOutlet weak var diversidadePercent: UILabel!
-    @IBOutlet weak var consciPercent: UILabel!
-    @IBOutlet weak var justisPercent: UILabel!
-    @IBOutlet weak var racismoPercent: UILabel!
-    @IBOutlet weak var misPercent: UILabel!
-    @IBOutlet weak var transfobPercent: UILabel!
+    //@IBOutlet weak var positiveBtn: UIBarButtonItem!
+    //@IBOutlet weak var negativeBtn: UIBarButtonItem!
+
     
     
     
@@ -33,19 +32,23 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNegativeComments()
+        //setNegativeComments()
         tabBarController?.tabBar.isHidden = true
-        tableView!.delegate = self
-        tableView!.dataSource = self
-        self.view .addSubview(tableView!)
+        
+        overViewContainer.isHidden = false
+        positiveViewContainer.isHidden = true
+        negativeViewContainer.isHidden = true
+        //tableView!.delegate = self
+        //tableView!.dataSource = self
+        //self.view .addSubview(tableView!)
         
         // navbar tittle
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
         
         // buttons
-        positiveBtn.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
-        negativeBtn.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
+        //positiveBtn.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
+        //negativeBtn.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,131 +56,37 @@ class LocalViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func segmentedControlChanged(_ sender: Any) {
+        
+        if segmentedPage.selectedSegmentIndex == 0 {
+            overViewContainer.isHidden = false
+            positiveViewContainer.isHidden = true
+            negativeViewContainer.isHidden = true
+            
+        } else if segmentedPage.selectedSegmentIndex == 1 {
+            overViewContainer.isHidden = true
+            positiveViewContainer.isHidden = false
+            negativeViewContainer.isHidden = true
+            
+        } else if segmentedPage.selectedSegmentIndex == 2 {
+            overViewContainer.isHidden = true
+            positiveViewContainer.isHidden = true
+            negativeViewContainer.isHidden = false
+        }
+    }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    func makeSegue(_ tag:String) {
+        tagName = tag
+        performSegue(withIdentifier: "TagDescriptionSegue", sender: self)
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    //MARK: TableViewConfigs
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return comments.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath)->CGFloat {
-        return 150
-    }
-    
-    // Set the spacing between sections
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return cellSpacingHeight
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "CommentViewCell"
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CommentViewCell  else {
-            fatalError("The dequeued cell is not an instance of CommentViewCell.")
+        if segue.identifier == "TagDescriptionSegue" {
+            let dest = segue.destination as! DescriptionViewController
+            
+            dest.tagName = tagName
+            
         }
-        
-        let comment = comments[indexPath.section]
-        
-        cell.name.text = comment.userName
-        cell.rating.rating = comment.rating
-        if (comment.tags[0] == true) {
-            cell.tag1.text = "Diversidade"
-            cell.pin1Image.isHidden = false
-        } else if(comment.tags[3] == true) {
-            cell.tag1.text = "Racismo"
-            cell.pin1Image.isHidden = false
-        } else {
-            cell.tag1.text = ""
-            cell.pin1Image.isHidden = true
-        }
-        
-        if (comment.tags[1] == true) {
-            cell.tag2.text = "Conscientizador"
-            cell.pin2Image.isHidden = false
-        } else if(comment.tags[4] == true) {
-            cell.tag2.text = "Misoginia"
-            cell.pin2Image.isHidden = false
-        } else {
-            cell.tag2.text = ""
-            cell.pin2Image.isHidden = true
-        }
-        
-        if (comment.tags[2] == true) {
-            cell.tag3.text = "Justiça Social"
-            cell.pin3Image.isHidden = false
-        } else if(comment.tags[5] == true) {
-            cell.tag3.text = "Transfobia"
-            cell.pin3Image.isHidden = false
-        } else {
-            cell.pin3Image.isHidden = true
-            cell.tag3.text = ""
-        }
-        
-        cell.commentDate.text = comment.commentDate
-        
-        cell.commentText.text = comment.text
-        
-        
-        // cell design
-        cell.backgroundColor = UIColor.white
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        cell.clipsToBounds = true
-        
-        return cell
     }
-    
-    
-    
-    
-    //MARK: Actions
-    @IBAction func positiveComments(_ sender: Any) {
-        setPositiveComments()
-    }
-    @IBAction func negativeComments(_ sender: Any) {
-        setNegativeComments()
-    }
-    
-
-    
-    //MARK: Private methods
-    private func setNegativeComments() {
-        let comment1 = Comment(userName: "Luiza", rating: 1, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "05/11/2016", tags: [false, false, false, true, false, false])
-        let comment2 = Comment(userName: "Rafael", rating: 3, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "15/09/2016", tags: [false, false, false, true, true, false])
-        let comment3 = Comment(userName: "Gregorio", rating: 2, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "12/12/2016", tags: [false, false, false, true, true, true])
-        comments.removeAll()
-        comments += [comment1!, comment2!, comment3!]
-        self.tableView.reloadData()
-    }
-    
-    private func setPositiveComments() {
-        let comment1 = Comment(userName: "Ricardo", rating: 5, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "05/01/2017", tags: [true, false, true, false, false, false])
-        let comment2 = Comment(userName: "Roberta", rating: 4, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "07/02/2017", tags: [false, true, false, false, false, false])
-        let comment3 = Comment(userName: "Anastor", rating: 4, text: "Ham corned beef chicken tri-tip leberkas beef ribs short ribs bresaola porchetta t-bone pork chop shoulder. Bresaola tail doner chicken ham short ribs. Landjaeger strip steak sausage, boudin ball tip chuck pork chop alcatra sha", commentDate: "02/03/2017",tags: [true, true, true, false, false, false])
-        comments.removeAll()
-        comments += [comment1!, comment2!, comment3!]
-        self.tableView.reloadData()
-    }
-
 }
