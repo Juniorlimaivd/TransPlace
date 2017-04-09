@@ -72,18 +72,24 @@ import UIKit
         // Load Button Images
         let bundle = Bundle(for: type(of: self))
         let filledStar = UIImage(named: "filledStar", in: bundle, compatibleWith: self.traitCollection)
+        let filledStarChanged = filledStar?.withRenderingMode(.alwaysTemplate)
+        
         let emptyStar = UIImage(named:"emptyStar", in: bundle, compatibleWith: self.traitCollection)
+        let emptyStarChanged = emptyStar?.withRenderingMode(.alwaysTemplate)
+        
         let highlightedStar = UIImage(named:"highlightedStar", in: bundle, compatibleWith: self.traitCollection)
+        let highlightedStarChanged = highlightedStar?.withRenderingMode(.alwaysTemplate)
         
         for index in 0..<starCount {
             // Create the button
             let button = UIButton()
             
             // Set the button images
-            button.setImage(emptyStar, for: .normal)
-            button.setImage(filledStar, for: .selected)
-            button.setImage(highlightedStar, for: .highlighted)
-            button.setImage(highlightedStar, for: [.highlighted, .selected])
+            button.setImage(emptyStarChanged, for: .normal)
+            button.setImage(filledStarChanged, for: .selected)
+            button.setImage(highlightedStarChanged, for: .highlighted)
+            button.setImage(highlightedStarChanged, for: [.highlighted, .selected])
+            button.tintColor = UIColor(red: 106.0/255, green: 43.0/255, blue: 252.0/255, alpha: 1.0)
             
             // Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
