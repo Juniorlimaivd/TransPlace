@@ -23,9 +23,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Procure lugares inclusivos..." showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75E-Dq-W45">
+                            <searchBar contentMode="redraw" placeholder="Procure lugares inclusivos..." showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75E-Dq-W45">
                                 <rect key="frame" x="0.0" y="64" width="375" height="88"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="75E-Dq-W45" secondAttribute="height" multiplier="375:88" id="9e9-y1-drC"/>
+                                </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.41568627450000001" green="0.16862745100000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -38,10 +40,12 @@
                                     <string>Lazer</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="304" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-cV-iwa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="304" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-cV-iwa">
                                 <rect key="frame" x="0.0" y="160" width="375" height="458"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sdM-cV-iwa" secondAttribute="height" multiplier="375:458" id="PAd-Fy-cBT"/>
+                                </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="localCell" rowHeight="304" id="VF3-en-4AP" customClass="CategoryTableViewCell" customModule="TransPlace" customModuleProvider="target">
@@ -51,38 +55,62 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="304"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHr-tw-TyR">
-                                                    <rect key="frame" x="13" y="16" width="348" height="183"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHr-tw-TyR">
+                                                    <rect key="frame" x="27.5" y="22.5" width="319" height="168"/>
                                                     <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aHr-tw-TyR" secondAttribute="height" multiplier="116:61" id="5qE-3c-1tx"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ThoughtWorks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONH-3b-Psw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ThoughtWorks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONH-3b-Psw">
                                                     <rect key="frame" x="16" y="212" width="133" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ONH-3b-Psw" secondAttribute="height" multiplier="133:24" id="9C7-4I-9Fq"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-1C-CRN" customClass="SwiftyStarRatingView" customModule="SwiftyStarRatingView">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-1C-CRN" customClass="SwiftyStarRatingView" customModule="SwiftyStarRatingView">
                                                     <rect key="frame" x="211" y="212" width="150" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="KLv-Sc-hKw"/>
+                                                        <constraint firstAttribute="width" secondItem="Eck-1C-CRN" secondAttribute="height" multiplier="6:1" id="r2S-f6-Tbr"/>
+                                                    </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Av. Gov. Agamenon Magalhães, 4779" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl3-2O-pd4">
-                                                    <rect key="frame" x="16" y="245" width="283" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Av. Gov. Agamenon Magalhães, 4779" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl3-2O-pd4">
+                                                    <rect key="frame" x="16" y="245" width="283" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="jl3-2O-pd4" secondAttribute="height" multiplier="283:24" id="A6w-UY-a9q"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Santo Amaro, Recife - PE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-9B-D1o">
-                                                    <rect key="frame" x="16" y="271" width="283" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Santo Amaro, Recife - PE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-9B-D1o">
+                                                    <rect key="frame" x="16" y="271" width="283" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xfF-9B-D1o" secondAttribute="height" multiplier="283:18" id="E2E-v5-my1"/>
+                                                        <constraint firstAttribute="width" constant="283" id="UQl-wu-mhF"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Eck-1C-CRN" firstAttribute="trailing" secondItem="aHr-tw-TyR" secondAttribute="trailing" id="1XX-SX-Cjj"/>
+                                                <constraint firstItem="jl3-2O-pd4" firstAttribute="top" secondItem="ONH-3b-Psw" secondAttribute="bottom" constant="9" id="24E-ic-ubj"/>
+                                                <constraint firstItem="ONH-3b-Psw" firstAttribute="top" secondItem="aHr-tw-TyR" secondAttribute="bottom" constant="21.5" id="2gl-Gj-Kkg"/>
+                                                <constraint firstItem="xfF-9B-D1o" firstAttribute="top" secondItem="jl3-2O-pd4" secondAttribute="bottom" constant="4.5" id="9jp-6J-h0i"/>
+                                                <constraint firstItem="aHr-tw-TyR" firstAttribute="centerX" secondItem="VYQ-Mz-znQ" secondAttribute="centerX" id="Pts-mj-fMF"/>
+                                                <constraint firstItem="Eck-1C-CRN" firstAttribute="centerY" secondItem="ONH-3b-Psw" secondAttribute="centerY" id="R7W-xH-oPQ"/>
+                                                <constraint firstItem="aHr-tw-TyR" firstAttribute="centerY" secondItem="VYQ-Mz-znQ" secondAttribute="centerY" multiplier="0.7" id="WLl-5U-HR1"/>
+                                                <constraint firstItem="jl3-2O-pd4" firstAttribute="leading" secondItem="ONH-3b-Psw" secondAttribute="leading" id="Xps-of-w4Z"/>
+                                                <constraint firstItem="xfF-9B-D1o" firstAttribute="leading" secondItem="jl3-2O-pd4" secondAttribute="leading" id="f3g-ot-5My"/>
+                                                <constraint firstItem="aHr-tw-TyR" firstAttribute="width" secondItem="VYQ-Mz-znQ" secondAttribute="width" multiplier="0.85" id="r1s-6C-39P"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="starView" destination="Eck-1C-CRN" id="ewX-gp-lgW"/>
@@ -92,6 +120,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sdM-cV-iwa" firstAttribute="centerX" secondItem="Ljf-Nl-Ccr" secondAttribute="centerX" id="8YH-GN-CuL"/>
+                            <constraint firstItem="75E-Dq-W45" firstAttribute="top" secondItem="pMQ-R7-D7A" secondAttribute="bottom" id="JT7-2u-Zos"/>
+                            <constraint firstItem="a58-9w-Fst" firstAttribute="top" secondItem="sdM-cV-iwa" secondAttribute="bottom" id="PeT-AC-bDO"/>
+                            <constraint firstItem="sdM-cV-iwa" firstAttribute="width" secondItem="Ljf-Nl-Ccr" secondAttribute="width" id="Wku-Vk-KDD"/>
+                            <constraint firstItem="75E-Dq-W45" firstAttribute="centerX" secondItem="Ljf-Nl-Ccr" secondAttribute="centerX" id="Wws-Ds-IwV"/>
+                            <constraint firstItem="75E-Dq-W45" firstAttribute="width" secondItem="Ljf-Nl-Ccr" secondAttribute="width" id="kqn-az-cJ8"/>
+                            <constraint firstItem="sdM-cV-iwa" firstAttribute="top" secondItem="75E-Dq-W45" secondAttribute="bottom" constant="8" id="ycH-SI-5cA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="categoryTableView" destination="sdM-cV-iwa" id="jiv-d1-sQd"/>
