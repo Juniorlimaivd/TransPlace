@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.setNavigationBarHidden(true, animated: true)
         searchBarButton.layer.cornerRadius = 5.0
         searchBarButton.layer.shadowColor = UIColor.black.cgColor
         searchBarButton.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -42,10 +42,14 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     

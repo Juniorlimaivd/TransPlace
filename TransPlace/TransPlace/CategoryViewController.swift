@@ -12,7 +12,9 @@ class CategoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationItem.title = "Locals"
+        
         // Do any additional setup after loading the view.
     }
 

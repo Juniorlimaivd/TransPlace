@@ -18,7 +18,7 @@ class CommentRegisterViewController: UITableViewController , UITextViewDelegate,
     @IBOutlet weak var anonymousSwitch: UISwitch!
     
     @IBOutlet weak var dateTextField: UITextField!
-    let badTagsArray = ["transfobia", "misoginia", "racismo"]
+    let badTagsArray = ["transfobia", "misoginia", "assedio"]
     let goodTagsArray = ["apoiaDiversidade", "conscientizador", "justiçaSocial"]
     
     var choosedTags = [String]()
