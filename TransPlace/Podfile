@@ -10,5 +10,9 @@ target 'TransPlace' do
   pod ‘Firebase/Database’
   pod ‘SwiftyJSON’ 
   # Pods for TransPlace
-
+  pod 'Firebase'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'SwiftyJSON'
+  
 end

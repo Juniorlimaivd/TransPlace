@@ -8,36 +8,21 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>Pods-TransPlace.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>SwiftyStarRatingView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,22 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>00842E7E43CF0C35A4A34C47A742E692</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2F9A46EA1372EC26DE8D3D0025F406B1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>411DF4F40A98B7A0E8DDD0A2068A962B</key>
+		<key>379BCE763F2BCA24D6456F0C8C21CF92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C37CAF3840B2A841532FFA4496F0225E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

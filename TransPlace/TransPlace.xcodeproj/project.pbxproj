@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0FDFB0955626DA4BB8D4288D /* Pods_TransPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EBE34CB7ED429EC0F705E4 /* Pods_TransPlace.framework */; };
+		528460F61E99E7A000641C20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528460F51E99E7A000641C20 /* GoogleService-Info.plist */; };
+		528460F81E99EF8900641C20 /* FirebaseCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528460F71E99EF8900641C20 /* FirebaseCalls.swift */; };
+		528460FA1E99F4C800641C20 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528460F91E99F4C800641C20 /* Place.swift */; };
+		528460FD1E9A0A4400641C20 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528460FC1E9A0A4400641C20 /* Address.swift */; };
 		52B800171E996A2500C5946E /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B800161E996A2500C5946E /* LocalViewController.swift */; };
 		52B800191E996AF400C5946E /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B800181E996AF400C5946E /* RatingControl.swift */; };
 		52B8001D1E9987CA00C5946E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8001C1E9987CA00C5946E /* Comment.swift */; };
@@ -30,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		16C5564F543144AF5339E2BA /* Pods-TransPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransPlace.release.xcconfig"; path = "Pods/Target Support Files/Pods-TransPlace/Pods-TransPlace.release.xcconfig"; sourceTree = "<group>"; };
+		528460F51E99E7A000641C20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		528460F71E99EF8900641C20 /* FirebaseCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseCalls.swift; sourceTree = "<group>"; };
+		528460F91E99F4C800641C20 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		528460FC1E9A0A4400641C20 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		52B800161E996A2500C5946E /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		52B800181E996AF400C5946E /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		52B8001C1E9987CA00C5946E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -75,6 +83,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		528460FB1E9A0A2E00641C20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				528460F91E99F4C800641C20 /* Place.swift */,
+				528460FC1E9A0A4400641C20 /* Address.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F4114A47F71A6132C04A5837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +103,7 @@
 		F72A07D11E9951DA0041AAE8 = {
 			isa = PBXGroup;
 			children = (
+				528460F51E99E7A000641C20 /* GoogleService-Info.plist */,
 				F72A07DC1E9951DA0041AAE8 /* TransPlace */,
 				F72A07DB1E9951DA0041AAE8 /* Products */,
 				05E029BC679474EFF4209BFE /* Pods */,
@@ -104,6 +122,7 @@
 		F72A07DC1E9951DA0041AAE8 /* TransPlace */ = {
 			isa = PBXGroup;
 			children = (
+				528460FB1E9A0A2E00641C20 /* Models */,
 				F72A07DD1E9951DA0041AAE8 /* AppDelegate.swift */,
 				F72A07EF1E9952090041AAE8 /* localStoryboard.storyboard */,
 				F73FD7551E9A1C2D002ECF42 /* DescriptionViewController.swift */,
@@ -122,6 +141,8 @@
 				52B800161E996A2500C5946E /* LocalViewController.swift */,
 				52B800181E996AF400C5946E /* RatingControl.swift */,
 				52B8001C1E9987CA00C5946E /* Comment.swift */,
+				52B800201E999A0500C5946E /* CommentViewCell.swift */,
+				528460F71E99EF8900641C20 /* FirebaseCalls.swift */,
 			);
 			path = TransPlace;
 			sourceTree = "<group>";
@@ -129,7 +150,6 @@
 		F73FD7541E9A0E6D002ECF42 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				52B800201E999A0500C5946E /* CommentViewCell.swift */,
 				F7F81CFF1E99E87D0060DA38 /* CategoryTableViewCell.swift */,
 			);
 			name = Cells;
@@ -200,6 +220,7 @@
 			files = (
 				F72A07E81E9951DA0041AAE8 /* LaunchScreen.storyboard in Resources */,
 				F72A07F01E9952090041AAE8 /* localStoryboard.storyboard in Resources */,
+				528460F61E99E7A000641C20 /* GoogleService-Info.plist in Resources */,
 				F72A07E51E9951DA0041AAE8 /* Assets.xcassets in Resources */,
 				F72A07E31E9951DA0041AAE8 /* Main.storyboard in Resources */,
 			);
@@ -268,11 +289,14 @@
 				F73FD74F1E9A05A2002ECF42 /* OverviewContainerViewController.swift in Sources */,
 				F73FD7531E9A0A6F002ECF42 /* NegativeViewController.swift in Sources */,
 				F73FD7511E9A0A64002ECF42 /* PositiveViewController.swift in Sources */,
+				528460F81E99EF8900641C20 /* FirebaseCalls.swift in Sources */,
 				52B8001D1E9987CA00C5946E /* Comment.swift in Sources */,
 				F7F81D001E99E87D0060DA38 /* CategoryTableViewCell.swift in Sources */,
+				528460FD1E9A0A4400641C20 /* Address.swift in Sources */,
 				52B800171E996A2500C5946E /* LocalViewController.swift in Sources */,
 				F72A07E01E9951DA0041AAE8 /* ViewController.swift in Sources */,
 				F72A07DE1E9951DA0041AAE8 /* AppDelegate.swift in Sources */,
+				528460FA1E99F4C800641C20 /* Place.swift in Sources */,
 				F72A07F21E9954870041AAE8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
