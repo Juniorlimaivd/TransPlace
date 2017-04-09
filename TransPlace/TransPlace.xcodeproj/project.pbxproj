@@ -21,6 +21,7 @@
 		F72A07F21E9954870041AAE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A07F11E9954870041AAE8 /* HomeViewController.swift */; };
 		F72A07F41E9955E60041AAE8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A07F31E9955E60041AAE8 /* CategoryViewController.swift */; };
 		F72A07F61E99560B0041AAE8 /* CommentRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A07F51E99560B0041AAE8 /* CommentRegisterViewController.swift */; };
+		F7F81D001E99E87D0060DA38 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F81CFF1E99E87D0060DA38 /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F72A07F11E9954870041AAE8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F72A07F31E9955E60041AAE8 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F72A07F51E99560B0041AAE8 /* CommentRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentRegisterViewController.swift; sourceTree = "<group>"; };
+		F7F81CFF1E99E87D0060DA38 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				F72A07EF1E9952090041AAE8 /* localStoryboard.storyboard */,
 				F72A07DF1E9951DA0041AAE8 /* ViewController.swift */,
 				F72A07E11E9951DA0041AAE8 /* Main.storyboard */,
+				F7F81CFF1E99E87D0060DA38 /* CategoryTableViewCell.swift */,
 				F72A07F51E99560B0041AAE8 /* CommentRegisterViewController.swift */,
 				F72A07F31E9955E60041AAE8 /* CategoryViewController.swift */,
 				F72A07F11E9954870041AAE8 /* HomeViewController.swift */,
@@ -242,6 +245,7 @@
 				52B800211E999A0500C5946E /* CommentViewCell.swift in Sources */,
 				52B800191E996AF400C5946E /* RatingControl.swift in Sources */,
 				52B8001D1E9987CA00C5946E /* Comment.swift in Sources */,
+				F7F81D001E99E87D0060DA38 /* CategoryTableViewCell.swift in Sources */,
 				52B800171E996A2500C5946E /* LocalViewController.swift in Sources */,
 				F72A07E01E9951DA0041AAE8 /* ViewController.swift in Sources */,
 				F72A07DE1E9951DA0041AAE8 /* AppDelegate.swift in Sources */,
