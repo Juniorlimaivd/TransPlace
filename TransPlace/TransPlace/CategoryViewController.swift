@@ -8,17 +8,34 @@
 
 import UIKit
 import SwiftyStarRatingView
+import Firebase
+import SwiftyJSON
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryTableView: UITableView!
     var scope : String! = ""
+    var places = [Place]()
+    var ref: FIRDatabaseReference!
+    var rowSelected: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FIRDatabase.database().reference()
+        
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.title = "Locals"
+        
+        fetchPlaceInfo(callback: {
+            places in
+                self.places = places
+                print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+                print(places[0].name)
+                self.categoryTableView.reloadData()
+        })
+        
         categoryTableView.delegate = self
         categoryTableView.dataSource = self
         
@@ -47,8 +64,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return places.count
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,15 +87,42 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = categoryTableView.dequeueReusableCell(withIdentifier: "localCell")
+        let cell = categoryTableView.dequeueReusableCell(withIdentifier: "localCell") as? CategoryTableViewCell
+        
+        let place = places[indexPath.row]
+        
+        cell?.starView.value = CGFloat(place.rating)
+        cell?.name.text = place.name
+        cell?.streetNumber.text = "\(place.address.street), \(place.address.number)"
+        cell?.cidadeEstado.text = "\(place.address.city) - \(place.address.state)"
+        let selectImage = "imageLocal\(indexPath.row)"
+        cell?.imagePlace.image = UIImage(named: selectImage)
+//        print(place.imageAdress)
+//        let url = URL(string: place.imageAdress)
+//        DispatchQueue.global().async {
+//            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+//            DispatchQueue.main.async {
+//                cell?.imagePlace.image = UIImage(data: data!)
+//            }
+//        }
 
+        
         return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.rowSelected = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "LocalSegue", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "LocalSegue") {
+            var viewController = segue.destination as? LocalViewController
+            viewController?.placeId = self.rowSelected
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -84,5 +132,41 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func fetchPlaceInfo(callback: @escaping ([Place]) -> ()) -> ()  {
+        
+        ref.child("places").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            let json = JSON(snapshot.value)
+            
+            var places = [Place]()
+            
+            for index in 0...4 {
+                var place = Place(name: "--", address: Address(city:"--", number:"--", additional:"--", state:"--", street:"--", zipCode:"--"), rating: 0)
+                
+                place.name = json[index]["name"].string!
+                place.rating = json[index]["ratingPoints"].int!
+                place.address.city = json[index]["address"]["city"].string!
+                place.address.number = json[index]["address"]["number"].string!
+                place.address.street = json[index]["address"]["street"].string!
+                place.address.state = json[index]["address"]["state"].string!
+                place.address.additional = json[index]["address"]["additional"].string!
+                place.address.zipCode = json[index]["address"]["zipcode"].string!
+                place.imageAdress = json[index]["image"].string!
+                
+                
+               
+                places.append(place)
+            }
+            callback(places)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+
 
 }

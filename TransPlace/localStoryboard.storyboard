@@ -106,11 +106,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cityStateLabel" destination="2Dk-y0-rPU" id="zSO-gh-TuF"/>
+                        <outlet property="imagePlace" destination="Jgw-uV-ciY" id="jJY-7a-Cqw"/>
+                        <outlet property="nameLabel" destination="5hZ-Gj-pLh" id="0PK-Y3-yAX"/>
                         <outlet property="navItem" destination="TvN-lg-75s" id="zSh-ol-yuR"/>
                         <outlet property="negativeViewContainer" destination="V6z-DC-HMi" id="XFj-dp-fcy"/>
                         <outlet property="overViewContainer" destination="tL3-E4-r9Q" id="5Fl-Io-dfd"/>
                         <outlet property="positiveViewContainer" destination="f7j-sM-Sxc" id="C7y-py-YCp"/>
                         <outlet property="segmentedPage" destination="6gD-1j-Cae" id="h02-nn-i1Y"/>
+                        <outlet property="streetNumberLabel" destination="Lse-pc-J4a" id="eJK-MX-sqf"/>
                         <segue destination="b3Q-df-8Rh" kind="show" identifier="TagDescriptionSegue" id="fZw-eM-0It"/>
                     </connections>
                 </viewController>
@@ -140,7 +144,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6h-s3-XOO" id="hNh-GH-Tnm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luiza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-g1-sVx">
@@ -238,7 +242,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="27" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJT-lU-wZB">
                                 <rect key="frame" x="29" y="186" width="330" height="423"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat erat nec turpis laoreet molestie. Integer semper malesuada lorem sit amet malesuada. Aenean at suscipit quam. Nam lobortis felis sed leo sodales, ac placerat massa ultricies. Ut accumsan velit lectus, vitae vulputate leo laoreet nec. Morbi aliquet vestibulum molestie. Vivamus elementum urna nec volutpat porttitor. Pellentesque porta efficitur egestas. Duis viverra suscipit mi, non tincidunt justo aliquam at. In tempus bibendum egestas. Aenean eget porta leo. Quisque eu lorem vel tortor ultricies laoreet.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat erat nec turpis laoreet molestie. Integer semper malesuada lorem sit amet malesuada. Aenean at suscipit quam. Nam lobortis felis sed leo sodales, ac placerat massa ultricies. Ut accumsan velit lectus, vitae vulputate leo laoreet nec. Morbi aliquet vestibulum molestie. Vivamus elementum urna nec volutpat porttitor. Pellentesque porta efficitur egestas. Duis viverra suscipit mi, non tincidunt justo aliquam at. In tempus bibendum egestas. Aenean eget porta leo. Quisque eu lorem vel tortor ultricies laoreet.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -386,7 +390,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRY-hU-5zJ" id="x21-0a-ceT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luiza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXL-9x-KoF">

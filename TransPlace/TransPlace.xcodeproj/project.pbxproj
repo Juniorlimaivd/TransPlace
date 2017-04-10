@@ -190,7 +190,7 @@
 				TargetAttributes = {
 					F72A07D91E9951DA0041AAE8 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 7KVWXUCE6H;
+						DevelopmentTeam = N4UKH6NFCZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -421,7 +421,7 @@
 			baseConfigurationReference = AB2568410CFE2C739E6DBF3E /* Pods-TransPlace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7KVWXUCE6H;
+				DEVELOPMENT_TEAM = N4UKH6NFCZ;
 				INFOPLIST_FILE = TransPlace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -436,7 +436,7 @@
 			baseConfigurationReference = 16C5564F543144AF5339E2BA /* Pods-TransPlace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7KVWXUCE6H;
+				DEVELOPMENT_TEAM = N4UKH6NFCZ;
 				INFOPLIST_FILE = TransPlace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
